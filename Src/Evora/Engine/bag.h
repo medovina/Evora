@@ -17,7 +17,7 @@ namespace model
 		std::mt19937 m_rng;
 		void generate_tiles(int count, tile color);
 	public:
-		bag();
+		bag(int seed);
 		void shuffle();
 		bool draw_tile(tile& out);
 		bool refill(lid& lid);

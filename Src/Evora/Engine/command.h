@@ -14,5 +14,6 @@ namespace control
 		virtual bool is_move() = 0;
 		virtual int player_index() = 0;
 		virtual std::unique_ptr<command> clone() = 0;
+		virtual std::string to_string() { return "move"; }
 	};
 }

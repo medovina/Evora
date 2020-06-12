@@ -36,3 +36,8 @@ int center_offer::player_index()
 {
 	return m_player_index;
 }
+
+std::string center_offer::to_string() {
+	return "center_offer(" + tile_to_string(m_color) +
+	       " to pattern line " + std::to_string(m_pattern_line_index) + ")";
+}

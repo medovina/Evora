@@ -178,6 +178,7 @@ void ai::minimax_ai::move()
 		m_beta = std::numeric_limits<int>::max();
 		minimax(m_board_index, 0, mockup);
 	}
+	// printf("minimax_ai: searched to depth %d (m_round_finished = %s)\n", m_max_depth, m_round_finished ? "true" : "false");
 	m_controller->add_command(std::move(m_best_move));
 	m_controller->step();
 }

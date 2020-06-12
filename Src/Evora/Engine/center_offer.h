@@ -17,6 +17,7 @@ namespace control
 		std::unique_ptr<command> clone() override;
 		bool is_move() override;
 		int player_index() override;
+		std::string to_string() override;
 	private:
 		int m_player_index;
 		int m_pattern_line_index;

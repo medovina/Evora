@@ -28,6 +28,7 @@ namespace model
 		std::vector<pattern_line>::const_iterator pattern_lines_end() const;
 		std::vector<tile>::const_iterator floor_begin() const;
 		std::vector<tile>::const_iterator floor_end() const;
+		wall &get_wall() { return m_wall; }
 		void add_to_floor(tile color);
 		bool has_starter_tile();
 		void set_starter_tile(bool cond);

@@ -17,7 +17,7 @@ namespace godot
 	{
 		bool wait_for_refill = false;
 	public:
-		GodotGame(int players) :game(players) {}
+		GodotGame(int players) :game(players, 3) {}
 		int bag_to_factories() override;
 		int factory_to_pattern_line(int factory_index, int player_index, int pattern_line_index, tile color) override;
 		int factory_to_floor(int factory_index, int player_index, tile color) override;

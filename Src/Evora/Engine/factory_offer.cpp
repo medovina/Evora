@@ -38,3 +38,9 @@ int factory_offer::player_index()
 {
 	return m_player_index;
 }
+
+std::string factory_offer::to_string() {
+	return "factory_offer(" + tile_to_string(m_color) +
+	       " from factory " + std::to_string(m_factory_index) +
+		   " to pattern line " + std::to_string(m_pattern_line_index) + ")";
+}

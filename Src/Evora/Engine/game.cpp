@@ -6,7 +6,7 @@ namespace model
 	 * \brief Creates a game instance with a given number of players
 	 * \param number_of_players Number of players in game
 	 */
-	game::game(int number_of_players)
+	game::game(int number_of_players, int seed) : m_bag(seed)
 	{
 		const int number_of_factories = number_of_players * 2 + 1;
 		for (int i = 0; i < number_of_factories; i++)
@@ -496,7 +496,7 @@ namespace model
 		int max_score = 0;
 		int winner_index = 0;
 		int max_horizontal_lines = 0;
-		for (int i = 0; i < m_boards.size(); ++i)
+		for (unsigned int i = 0; i < m_boards.size(); ++i)
 		{
 			int player_score = m_boards[i].get_score();
 			if(player_score > max_score)
