@@ -24,7 +24,11 @@ double evalPlayer(std::shared_ptr<control::game_controller>& controller, int pla
 			int row = ((int) color + y) % COLORS;
 			int score = wall.score_tile(y, color) + wall.score_line(y) +
 			            wall.score_row(row) + wall.score_color(color);
-			double frac = 1.0 * count / (y + 1);
+			double frac;
+			if (count == y + 1)
+				frac = 1.0;
+			else
+			    frac = 0.7 * count / (y + 1);
 			v += frac * score;
 		}
 	}
